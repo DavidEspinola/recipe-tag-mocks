@@ -1,4 +1,9 @@
+# recipe-tag-mocks
 API ligera de prototipado para recetas (o cualquier otra cosa) con hastags
+
+# Cómo empezar
+Descargar el repositorio, ejecutar `npm install` y `npm start`.
+Esto abrirá un servidor en localhost:3000 al que se podrá hacer peticiones, por ejemplo `http://localhost/recipes`.
 
 # Métodos de la Api
 
