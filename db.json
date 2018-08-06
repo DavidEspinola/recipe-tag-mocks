@@ -1,0 +1,37 @@
+{
+  "recipes": [
+    {
+      "id": "4",
+      "name": "Tortilla de patatas",
+      "createdAt": 1533569947002,
+      "description": "El plato #typical-spanish"
+    },
+    {
+      "id": "3",
+      "name": "Pollo a la plancha",
+      "createdAt": 1533569947001
+    },
+    {
+      "id": "2",
+      "name": "Sandwich mixto",
+      "createdAt": 1533569947001
+    },
+    {
+      "id": "1",
+      "name": "Huevo cocido",
+      "createdAt": 1533569947001
+    }
+  ],
+  "tags": [
+    {
+      "name": "typical-spanish",
+      "count": 1,
+      "lastUpdated": 1533578747836
+    },
+    {
+        "name": "dieta",
+        "count": 1,
+        "lastUpdated": 1533578747837
+      }
+  ]
+}
