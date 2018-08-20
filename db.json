@@ -4,22 +4,26 @@
       "id": "4",
       "name": "Tortilla de patatas",
       "createdAt": 1533569947002,
-      "description": "El plato #typical-spanish"
+      "description": "El plato #typical-spanish",
+      "user": "1"
     },
     {
       "id": "3",
       "name": "Pollo a la plancha",
-      "createdAt": 1533569947001
+      "createdAt": 1533569947001,
+      "user": "1"
     },
     {
       "id": "2",
       "name": "Sandwich mixto",
-      "createdAt": 1533569947001
+      "createdAt": 1533569947001,
+      "user": "1"
     },
     {
       "id": "1",
       "name": "Huevo cocido",
-      "createdAt": 1533569947001
+      "createdAt": 1533569947001,
+      "user": "1"
     }
   ],
   "tags": [
@@ -28,5 +32,8 @@
       "count": 1,
       "lastUpdated": 1533578747836
     }
+  ],
+  "users": [
+    { "id": "1", "name": "admin", "password": "admin" }
   ]
 }

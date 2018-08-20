@@ -5,6 +5,23 @@ API ligera de prototipado para recetas (o cualquier otra cosa) con hastags
 Descargar el repositorio, ejecutar `npm install` y `npm start`.
 Esto abrirá un servidor en localhost:3000 al que se podrá hacer peticiones, por ejemplo `http://localhost/recipes`.
 
+# Logado
+Los servicios están protegidos para ser sólo accesibles por usuarios logados. El backend utiliza autenticación básica, por lo que es necesario incluir las credenciales del usuario convertidas a base64 en cada petición. Un ejemplo de implementación sería:
+```javascript
+const user = 'admin';
+const password = 'admin';
+const credentials = btoa(`${ user }:${ password }`); // Convertimos credenciales a base 64
+
+fetch('http://localhost:3000/recipes', {
+  method: 'POST',
+  body: JSON.stringify({name: 'Receta ejemplo', description: 'Esto es un #ejemplo'}),
+  headers:{
+      'Authentication': `Basic ${ credentials }`, // Incluimos las credenciales en la cabecera
+      'Content-Type': 'application/json'
+  }
+}).then(...);
+```
+
 # Métodos de la Api
 
 | PATH                                           | METHOD | Descripción                                                                                           | Ejemplo Body                                              |
@@ -20,3 +37,5 @@ Esto abrirá un servidor en localhost:3000 al que se podrá hacer peticiones, po
 | /recipes?_sort=createdAt&_order=desc&_limit=10 | GET    | Obtiene las últimas 10 recetas que se crearon                                                         |                                                           |
 | /tags                                          | GET    | Obtiene todos los tags                                                                                |                                                           |
 | /tags?_sort=lastUpdated&_order=desc&_limit=10  | GET    | Obtiene los últimos 10 tags que han cambiado                                                          |                                                           |
+| /users/:id  | GET    | Obtiene el detalle de un usuario                                                          |                                                           |
+| /users/:id  | PATCH    | Modifica algún detalle de un usuario (cada usuario sólo puede editarse a sí mismo)                                                         |     {"password":"Nueva contraseña"}                                                      |
